@@ -1,5 +1,6 @@
-package com.joyce.kafka;
+package com.joyce.kafka.demo;
 
+import com.joyce.kafka.Constant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,15 +11,29 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-public class KafkaProducer {
+public class KafkaProducerController {
 
-    private Logger logger = LoggerFactory.getLogger(KafkaProducer.class);
+    private Logger logger = LoggerFactory.getLogger(KafkaProducerController.class);
 
     @Autowired
     private KafkaTemplate<String, String> template;
+
+    /**
+     * 单条消息发送
+     *
+     * @return
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
+    @RequestMapping("sendSingle")
+    public String sendSingle() {
+        template.send( Constant.TOPIC, "0", "value-"+new Random().nextInt(1000));
+        return "success";
+    }
 
     /**
      * 同步发送
@@ -31,7 +46,7 @@ public class KafkaProducer {
     public String syncSendMessage() {
         for (int i = 0; i < 100; i++) {
             try {
-                template.send("test", "0", "foo" + i).get();
+                template.send( Constant.TOPIC, "0", "foo" + i).get();
             } catch (InterruptedException e) {
                 logger.error("sync send message fail [{}]", e.getMessage());
                 e.printStackTrace();
@@ -59,7 +74,7 @@ public class KafkaProducer {
              * </p>
              *
              */
-            ListenableFuture<SendResult<String, String>> send = template.send("test", "0", "foo" + i);
+            ListenableFuture<SendResult<String, String>> send = template.send( Constant.TOPIC, "0", "foo" + i);
             send.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
 
                 @Override

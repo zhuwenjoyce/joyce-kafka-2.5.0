@@ -1,0 +1,562 @@
+[1;35m2020-06-27 23:12:22[0;39m  [INFO]  [34morg.springframework.boot.StartupInfoLogger:55[0;39m  : Starting KafkaApplication on DESKTOP-JOYCE with PID 4276 (D:\work_idea\joyce-kafka\target\classes started by joyce in D:\work_idea\joyce-kafka) 
+[1;35m2020-06-27 23:12:22[0;39m  [INFO]  [34morg.springframework.boot.SpringApplication:651[0;39m  : No active profile set, falling back to default profiles: default 
+[1;35m2020-06-27 23:12:23[0;39m  [INFO]  [34morg.springframework.boot.web.embedded.tomcat.TomcatWebServer:108[0;39m  : Tomcat initialized with port(s): 8086 (http) 
+[1;35m2020-06-27 23:12:23[0;39m  [INFO]  [34morg.apache.juli.logging.DirectJDKLog:173[0;39m  : Starting service [Tomcat] 
+[1;35m2020-06-27 23:12:23[0;39m  [INFO]  [34morg.apache.juli.logging.DirectJDKLog:173[0;39m  : Starting Servlet engine: [Apache Tomcat/9.0.36] 
+[1;35m2020-06-27 23:12:23[0;39m  [INFO]  [34morg.apache.juli.logging.DirectJDKLog:173[0;39m  : Initializing Spring embedded WebApplicationContext 
+[1;35m2020-06-27 23:12:23[0;39m  [INFO]  [34morg.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:285[0;39m  : Root WebApplicationContext: initialization completed in 859 ms 
+[1;35m2020-06-27 23:12:23[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 'applicationTaskExecutor' 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.config.AbstractConfig:347[0;39m  : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mygroup-2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:117[0;39m  : Kafka version: 2.5.0 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:118[0;39m  : Kafka commitId: 66563e712b0b9f84 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:119[0;39m  : Kafka startTimeMs: 1593270744159 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:974[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Subscribed to topic(s): wen 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.config.AbstractConfig:347[0;39m  : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mygroup-3
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:117[0;39m  : Kafka version: 2.5.0 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:118[0;39m  : Kafka commitId: 66563e712b0b9f84 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:119[0;39m  : Kafka startTimeMs: 1593270744176 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:974[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Subscribed to topic(s): wen 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.config.AbstractConfig:347[0;39m  : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mygroup-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:117[0;39m  : Kafka version: 2.5.0 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:118[0;39m  : Kafka commitId: 66563e712b0b9f84 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:119[0;39m  : Kafka startTimeMs: 1593270744183 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:974[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Subscribed to topic(s): wen 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.springframework.boot.web.embedded.tomcat.TomcatWebServer:220[0;39m  : Tomcat started on port(s): 8086 (http) with context path '' 
+[1;35m2020-06-27 23:12:24[0;39m  [INFO]  [34morg.springframework.boot.StartupInfoLogger:61[0;39m  : Started KafkaApplication in 1.646 seconds (JVM running for 3.234) 
+[1;35m2020-06-27 23:12:26[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:26[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:26[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:26[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:26[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:26[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:30[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:30[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:30[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:30[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:30[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:30[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:32[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:32[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:32[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:32[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:32[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:12:32[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:1082[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Unsubscribed all topics or patterns and assigned partitions 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:1082[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Unsubscribed all topics or patterns and assigned partitions 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:1082[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Unsubscribed all topics or patterns and assigned partitions 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.springframework.core.log.LogAccessor:279[0;39m  : mygroup-1: Consumer stopped 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.springframework.core.log.LogAccessor:279[0;39m  : mygroup-2: Consumer stopped 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.springframework.core.log.LogAccessor:279[0;39m  : mygroup-3: Consumer stopped 
+[1;35m2020-06-27 23:12:33[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 'applicationTaskExecutor' 
+[1;35m2020-06-27 23:13:13[0;39m  [INFO]  [34morg.springframework.boot.StartupInfoLogger:55[0;39m  : Starting KafkaApplication on DESKTOP-JOYCE with PID 12872 (D:\work_idea\joyce-kafka\target\classes started by joyce in D:\work_idea\joyce-kafka) 
+[1;35m2020-06-27 23:13:13[0;39m  [INFO]  [34morg.springframework.boot.SpringApplication:651[0;39m  : No active profile set, falling back to default profiles: default 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.boot.web.embedded.tomcat.TomcatWebServer:108[0;39m  : Tomcat initialized with port(s): 8086 (http) 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.juli.logging.DirectJDKLog:173[0;39m  : Starting service [Tomcat] 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.juli.logging.DirectJDKLog:173[0;39m  : Starting Servlet engine: [Apache Tomcat/9.0.36] 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.juli.logging.DirectJDKLog:173[0;39m  : Initializing Spring embedded WebApplicationContext 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:285[0;39m  : Root WebApplicationContext: initialization completed in 812 ms 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 'applicationTaskExecutor' 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.config.AbstractConfig:347[0;39m  : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mygroup-2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:117[0;39m  : Kafka version: 2.5.0 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:118[0;39m  : Kafka commitId: 66563e712b0b9f84 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:119[0;39m  : Kafka startTimeMs: 1593270794848 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:974[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Subscribed to topic(s): wen 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.config.AbstractConfig:347[0;39m  : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mygroup-3
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:117[0;39m  : Kafka version: 2.5.0 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:118[0;39m  : Kafka commitId: 66563e712b0b9f84 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:119[0;39m  : Kafka startTimeMs: 1593270794863 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:974[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Subscribed to topic(s): wen 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.config.AbstractConfig:347[0;39m  : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mygroup-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:117[0;39m  : Kafka version: 2.5.0 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:118[0;39m  : Kafka commitId: 66563e712b0b9f84 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.common.utils.AppInfoParser$AppInfo:119[0;39m  : Kafka startTimeMs: 1593270794870 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:974[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Subscribed to topic(s): wen 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181[0;39m  : Initializing ExecutorService 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.boot.web.embedded.tomcat.TomcatWebServer:220[0;39m  : Tomcat started on port(s): 8086 (http) with context path '' 
+[1;35m2020-06-27 23:13:14[0;39m  [INFO]  [34morg.springframework.boot.StartupInfoLogger:61[0;39m  : Started KafkaApplication in 1.568 seconds (JVM running for 3.258) 
+[1;35m2020-06-27 23:13:16[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:16[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:16[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:16[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:16[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:16[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:19[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:19[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:19[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:19[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:19[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:19[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:21[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:21[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:21[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:21[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:21[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:21[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:23[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:23[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:23[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:23[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:23[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:23[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:25[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:25[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:25[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:25[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:25[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:25[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient:762[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+[1;35m2020-06-27 23:13:28[0;39m  [WARN]  [31morg.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater:1030[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:1082[0;39m  : [Consumer clientId=consumer-mygroup-3-2, groupId=mygroup-3] Unsubscribed all topics or patterns and assigned partitions 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:1082[0;39m  : [Consumer clientId=consumer-mygroup-1-3, groupId=mygroup-1] Unsubscribed all topics or patterns and assigned partitions 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.apache.kafka.clients.consumer.KafkaConsumer:1082[0;39m  : [Consumer clientId=consumer-mygroup-2-1, groupId=mygroup-2] Unsubscribed all topics or patterns and assigned partitions 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.springframework.core.log.LogAccessor:279[0;39m  : mygroup-2: Consumer stopped 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.springframework.core.log.LogAccessor:279[0;39m  : mygroup-1: Consumer stopped 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.springframework.core.log.LogAccessor:279[0;39m  : mygroup-3: Consumer stopped 
+[1;35m2020-06-27 23:13:31[0;39m  [INFO]  [34morg.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218[0;39m  : Shutting down ExecutorService 'applicationTaskExecutor' 

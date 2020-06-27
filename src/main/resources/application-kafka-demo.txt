@@ -1,0 +1,66 @@
+server.port=8086
+
+########################## producer config ##############################
+#####################  重要配置  ######################
+spring.kafka.producer.bootstrap.servers=192.168.2.60:9092,192.168.2.62:9092
+spring.kafka.producer.key.serializer=org.apache.kafka.common.serialization.StringSerializer.class
+spring.kafka.producer.value.serializer=org.apache.kafka.common.serialization.StringSerializer.class
+# acks=0  如果设置为0，生产者将不等待任何来自服务器的确认。每个记录返回的偏移量将始终设置为-1。
+# acks=1  这意味着leader确认消息即可，但不等待所有副本的完全确认的情况下进行响应。在这种情况下，如果leader在确认记录后立即失败，但是在副本复制它之前，那么记录将丢失。
+# acks=all  不仅需要leader确认收到消息，还将等待全部的副本确认。这保证了只要至少有一个副本保持活动状态，记录就不会丢失。这是最有力的保证。这相当于ack =-1设置。
+# acks=-1   跟集群有关
+# 默认 1
+spring.kafka.producer.acks=all
+# 一个批次发送的大小，默认16KB，超过这个大小就会发送数据
+spring.kafka.producer.batch.size=16384
+# 一个批次最长等待多久就发送数据，默认0，即马上发送
+spring.kafka.producer.linger.ms=0
+# 控制生产者最大发送大小，默认 1MB。这个值必须小于kafka服务器server.properties配置文件里的最大可接收数据大小配置：socket.request.max.bytes=104857600 (默认104857600 = 100MB)
+spring.kafka.producer.max.request.size=1048576
+
+#####################  非重要配置  ######################
+# 生产者内存缓冲区大小。默认33554432bytes=32MB
+spring.kafka.producer.buffer.memory=33554432
+# 发送重试次数，默认 2147483647，接近无限大
+spring.kafka.producer.retries=3
+# 请求超时时间，默认30秒
+spring.kafka.producer.request.timeout.ms=30000
+# 默认值5。并发状态下，kafka生产者允许存在最大的kafka服务端未确认接收的消息个数最大值。
+# 注意，如果该值设置为1，并且开启重试机制，则会在允许的重试次数内，阻塞其他消息发送到kafka Server端。并且为1的话，会严重影响生产者的吞吐量。仅适用于对数据有严格顺序要求的场景。
+spring.kafka.producer.max.in.flight.requests.per.connection=5
+# 最大阻塞时间，超过则抛出异常。默认60秒
+spring.kafka.max.block.ms=60000
+# 数据压缩类型：none、gzip、snappy、lz4、zstd，默认none什么都不做
+spring.kafka.compression.type=none
+# 客户端在进行发送和消费的时候，会缓存kafka的元数据。默认30秒
+spring.kafka.producer.metadata.max.age.ms=30000
+
+
+########################## consumer config ##############################
+spring.kafka.consumer.bootstrap.servers=192.168.2.61:9092,192.168.2.61:9093
+spring.kafka.consumer.key.deserializer=org.apache.kafka.common.serialization.StringDeserializer.class
+spring.kafka.consumer.value.deserializer=org.apache.kafka.common.serialization.StringDeserializer.class
+# 注意：相同的Topic下，相同的群组ID，只有一个消费者能消费到消息
+spring.kafka.consumer.group.id=myGroupId1
+# 消费者在读取一个没有偏移量的分区或者偏移量无效的情况下，读取设置。
+# latest: (默认)读取最新的，earliest: 读取最早的，none: 如果没有为使用者的组找到偏移量，则consumer抛出异常，anything else: consumer抛出异常
+spring.kafka.consumer.auto.offset.reset=latest
+# 是否自动提交偏移，默认true。偏移量自己控制，可以有效避免重复读、漏读
+spring.kafka.consumer.enable.auto.commit=false
+# 自动提交间隔，默认5秒。从开始消费一条数据到业务结束，必须在5秒内完成，否则会造成提前提交偏移量，如果出现事务失败，将会漏掉该条消费
+spring.kafka.consumer.auto.commit.interval.ms=5000
+# 控制每次poll方法返回的记录数量，默认500
+spring.kafka.consumer.max.poll.records=500
+# 把分区分配给消费者的策略。RangeAssignor：默认。采用大部分分区都分配给消费者群组里的群主(即消费者0)的策略。RoundRobinAssignor：采用所有消费者平均分配分区策略
+# 注意：无论分区个数变化或者消费者个数变化，都会触发再分配
+spring.kafka.consumer.partition.assignment.strategy=org.apache.kafka.clients.consumer.RangeAssignor.class
+# 客户端在进行发送和消费的时候，会缓存kafka的元数据。默认30秒
+spring.kafka.consumer.metadata.max.age.ms=30000
+
+
+
+
+
+
+
+
