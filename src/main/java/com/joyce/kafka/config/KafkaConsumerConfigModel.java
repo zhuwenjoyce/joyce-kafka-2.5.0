@@ -10,8 +10,9 @@ public class KafkaConsumerConfigModel {
     private String bootstrapServers;
     private String autoOffsetReset;
     private Boolean enableAutoCommit;
-    private Integer maxPollRecords;
     private Integer metadataMaxAgeMs;
+    private Integer fetchMinBytes;
+    private Integer fetchMaxWaitMs;
 
     public String getBootstrapServers() {
         return bootstrapServers;
@@ -36,20 +37,27 @@ public class KafkaConsumerConfigModel {
     public void setEnableAutoCommit(Boolean enableAutoCommit) {
         this.enableAutoCommit = enableAutoCommit;
     }
-
-    public Integer getMaxPollRecords() {
-        return maxPollRecords;
-    }
-
-    public void setMaxPollRecords(Integer maxPollRecords) {
-        this.maxPollRecords = maxPollRecords;
-    }
-
     public Integer getMetadataMaxAgeMs() {
         return metadataMaxAgeMs;
     }
 
     public void setMetadataMaxAgeMs(Integer metadataMaxAgeMs) {
         this.metadataMaxAgeMs = metadataMaxAgeMs;
+    }
+
+    public Integer getFetchMinBytes() {
+        return fetchMinBytes;
+    }
+
+    public void setFetchMinBytes(Integer fetchMinBytes) {
+        this.fetchMinBytes = fetchMinBytes;
+    }
+
+    public Integer getFetchMaxWaitMs() {
+        return fetchMaxWaitMs;
+    }
+
+    public void setFetchMaxWaitMs(Integer fetchMaxWaitMs) {
+        this.fetchMaxWaitMs = fetchMaxWaitMs;
     }
 }
