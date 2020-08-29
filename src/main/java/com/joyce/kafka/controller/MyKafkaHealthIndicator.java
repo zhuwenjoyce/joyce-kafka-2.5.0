@@ -1,8 +1,8 @@
 package com.joyce.kafka.controller;
 
-import org.apache.kafka.clients.admin.*;
-import org.apache.kafka.common.KafkaFuture;
-import org.apache.kafka.common.Node;
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.DescribeClusterOptions;
+import org.apache.kafka.clients.admin.DescribeClusterResult;
 import org.apache.kafka.common.config.ConfigResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,12 +13,17 @@ import org.springframework.boot.actuate.health.Status;
 import org.springframework.kafka.core.KafkaAdmin;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
+import java.util.Collections;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
  * localhost:8080/actuator/health
+ * refer docs:
+ * https://github.com/spring-projects/spring-boot/blob/7cd19822c6de99e835bcaff1307f104e863da265/spring-boot-project/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/kafka/KafkaHealthIndicator.java
+ *
+ * spring boot github address:
+ * https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project
  */
 @Component("kafka")
 public class MyKafkaHealthIndicator extends AbstractHealthIndicator {
