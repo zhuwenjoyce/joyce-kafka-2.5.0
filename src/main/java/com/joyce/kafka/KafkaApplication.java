@@ -1,6 +1,5 @@
 package com.joyce.kafka;
 
-import com.joyce.kafka.demo.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

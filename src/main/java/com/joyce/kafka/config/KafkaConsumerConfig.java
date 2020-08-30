@@ -66,6 +66,7 @@ public class KafkaConsumerConfig {
         Map<String, Object> configs = new HashMap<>();
         configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,
                 StringUtils.arrayToCommaDelimitedString(config.getBootstrapServers().split(",")));
+//        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,config.getBootstrapServers());
         return new KafkaAdmin(configs);
     }
 }

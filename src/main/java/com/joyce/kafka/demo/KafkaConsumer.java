@@ -14,12 +14,12 @@ public class KafkaConsumer {
     private Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
 
     // 相同的groupId的消费者只能有一个接收到消息
-    @KafkaListener(groupId="mygroup-1",topics = Constant.TOPIC )
+    @KafkaListener(groupId="mygroup-1",topics = Constant.TOPIC, containerFactory = "kafkaListenerContainerFactory" )
     public void listen1(String data) {
         logger.info("消费到消息1： [{}]", data);
     }
 
-    @KafkaListener(groupId="mygroup-2",topics =  Constant.TOPIC)
+    @KafkaListener(groupId="mygroup-2", topics =  Constant.TOPIC, containerFactory = "kafkaListenerContainerFactory")
     public void listen(ConsumerRecord<?, ?> record, Acknowledgment ack) throws InterruptedException {
         logger.info("消费到消息2|"+String.format(
                 "主题：%s，分区：%d，偏移量：%d，key：%s，value：%s",
@@ -31,7 +31,7 @@ public class KafkaConsumer {
         ack.acknowledge();
     }
 
-    @KafkaListener(groupId="mygroup-3", topics =  Constant.TOPIC)
+    @KafkaListener(groupId="mygroup-3", topics =  Constant.TOPIC, containerFactory = "kafkaListenerContainerFactory")
     public void test(String data, Acknowledgment ack) { // ConsumerRecord<String, String> record
         logger.info("消费到消息3： [{}]", data);
         //提交offset
